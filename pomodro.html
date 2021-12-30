@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>LearnSmart</title>
+    <link rel="icon" href="/src/imgs/Untitled design.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"
+    />
+    <link rel="stylesheet" href="src/assets/fonts/ionicons.min.css" />
+    <link rel="stylesheet" href="src/assets/css/Black-Navbar.css" />
+    <link rel="stylesheet" href="src/assets/css/countdown-timer-1.css" />
+    <link rel="stylesheet" href="src/assets/css/countdown-timer.css" />
+    <link rel="stylesheet" href="src/assets/css/Header-Blue.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- <link rel="stylesheet" href="src/assets/css/Login-Form-Clean.css" /> -->
+    <link rel="stylesheet" href="src/assets/css/Navigation-with-Button.css" />
+    <link rel="stylesheet" href="src/assets/css/Projects-Horizontal.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="src/assets/css/Registration-Form-with-Photo.css"
+    /> -->
+    <link rel="stylesheet" href="src/assets/css/Social-Icons.css" />
+    <link rel="stylesheet" href="src/assets/css/styles.css" />
+    <link rel="stylesheet" href="src/assets/bootstrap/css/modal.css">
+    <script defer src="src/assets/js/modal.js"></script>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-light navbar-expand-lg navigation-clean-button"
+      style="
+        background: #21a9af;
+        border-color: var(--bs-purple);
+        filter: blur(0px);
+      "
+    >
+    <div class="container">
+        <a
+          class="navbar-brand"
+          href="index.html"
+          style="color: rgb(241, 233, 233); height: 90px; font-size: 32px"
+          ><img class="navbar-brand" src="/src/imgs/Untitled design.png" height="100px" width="100px"></img>
+        LearnSmart</a
+        ><a
+          style="
+            color: rgb(251, 252, 253);
+            background: rgba(0, 0, 0, 0);
+            border-style: hidden;
+            border-color: var(--bs-gray-200);
+            opacity: 1;
+          "
+          href="highlighter.html"
+          >Highlighter</a
+        ><a style="color: rgb(229, 230, 231)" href="flashcard.html">FlashCard</a
+        ><a
+          style="
+            color: rgb(199, 203, 211);
+            border-style: hidden;
+            border-color: rgba(255, 255, 255, 0.877);
+          "
+          data-bs-target="#"
+          href="pomodro.html"
+          >Pomodro Timer</a
+        >
+        <button
+          class="login"
+          
+          style="
+            
+            color: rgb(8, 8, 8);
+            border-style: none;
+            transform: translate(-10px);
+            text-align: center;
+            
+          "
+        >Log In
+      </button>
+        <button
+          class="
+            btn btn-light btn-lg
+            text-capitalize
+            link-primary
+            d-flex
+            action-button
+          "
+          type="button"
+          style="
+            width: 118.125px;
+            height: 47px;
+            color: rgb(8, 8, 8);
+            border-style: none;
+            transform: translate(-31px);
+            text-align: center;
+            filter: saturate(81%) sepia(0%);
+          "
+        >
+          Sign up&nbsp;
+        </button>
+      </div>
+    </nav>
+    <div
+      id="wrapper"
+      style="
+        color: rgb(11, 11, 11);
+        background: #22a7ad;
+        text-align: center;
+        width: 615px;
+        padding: 85px;
+        margin: 83px 0px 0px;
+        transform: translate(374px);
+      "
+    >
+      <div class="container">
+        <h1 style="border-color: rgb(245, 244, 244); color: rgb(247, 247, 247)">
+          Pomodoro timer
+        </h1>
+        <div id="clockdiv">
+          
+          
+          <div class="clock-wrapper" style="background: rgb(47, 52, 56)">
+            <span class="minutes"> 25</span>
+            <div class="smalltext">
+              <p>Minutes</p>
+            </div>
+          </div>
+          <div class="clock-wrapper" style="background: rgb(47, 52, 56)">
+            <span class="seconds"> 00</span>
+            <div class="smalltext">
+              <p>Seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="btn btn-primary"
+        id="start"
+        type="button"
+        style="background: rgb(0, 191, 150); margin: 10px"
+      >
+        Start&nbsp;
+      </button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        id="pause"
+        style="background: rgb(0, 191, 150); margin: 10px"
+      >
+        Pause&nbsp;
+      </button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        id="stop"
+        style="background: rgb(0, 191, 150); margin: 10px"
+      >
+        Stop&nbsp;
+      </button>
+    </div>
+    <div class="modal-login hidden">
+      
+    <section class="login-clean">
+     
+              <form method="post">
+                <h2 class="visually-hidden">Login Form</h2>
+               
+                <div class="illustration">
+                  <i class="icon ion-social-facebook"></i>
+                </div>
+                <div class="mb-3">
+                  <input
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    class="form-control"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="mb-3">
+                  <button
+                    class="btn btn-primary d-block w-100"
+                    type="submit"
+                    style="background: rgb(31, 158, 164)"
+                  >
+                    Log In
+                  </button>
+                </div>
+                <a class="forgot" href="#">Forgot your email or password?</a>
+              </form>
+            </section>
+          </div>
+            
+         
+         
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="modal-signup hidden" role="dialog" tabindex="-1" id="modal-1" >
+           
+    <section class="login-clean">
+     
+      <form method="post">
+        <h2 class="visually-hidden">Login Form</h2>
+        <button class="btn--close-modal">&times;</button>
+        <div class="illustration">
+          <i class="icon ion-social-facebook"></i>
+        </div>
+                  <h2 class="text-center">
+                    <b>
+                    <strong>Create</strong> an account.</b>
+                  </h2>
+                  <div class="mb-3">
+                    <input
+                      class="form-control"
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      class="form-control"
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      class="form-control"
+                      type="password"
+                      name="password-repeat"
+                      placeholder="Password (repeat)"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <label class="form-check-label"
+                        ><b></b><input class="form-check-input" type="checkbox" />I
+                        agree to the license terms.</label></b></label
+                      >
+                      
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <button
+                      class="btn btn-primary d-block w-100"
+                      type="submit"
+                      style="background: rgb(33, 169, 175)"
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                  <a class="already" href="#"
+                    >You already have an account? Login here.</a
+                  >
+                </form>
+              </div>
+            
+            </section>
+          </div>
+          <div class="overlay hidden"></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <script src="src/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="src/assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="src/assets/js/countdown-timer.js"></script>
+  </body>
+</html>
