@@ -1,7 +1,7 @@
 # LearnSmart
 My project for the Future ready talent virtual internship.
 Technologies used:
-Visual Studio Code.
+Visual Studio Code/
 Azure App Service.
 Azure DevOps
 
